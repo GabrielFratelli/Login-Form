@@ -61,7 +61,7 @@ export const Form = styled.form`
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 
   input {
     width: 28rem;
@@ -78,6 +78,13 @@ export const Form = styled.form`
     font-size: 1rem;
     color: var(--titleinput);
   }
+
+  p {
+    margin-top: 0.2rem;
+    font-size: 1rem;
+    position: absolute;
+    color: var(--error);
+  }
 `;
 
 export const ButtonRemember = styled.div`
@@ -85,6 +92,7 @@ export const ButtonRemember = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 0.5rem;
 
   input {
     width: 1rem;

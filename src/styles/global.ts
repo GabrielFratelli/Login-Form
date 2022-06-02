@@ -32,6 +32,7 @@ cursor: pointer;
   --rememberbutton: #2C5282;
   --checkbox: #E8E8E8;
   --loginbutton: #04C35C;
+  --error: #cf0e0e;
   --googlebutton: #2D3748;
   --footer: #616161;
   --footerbutton: #2B6CB0;

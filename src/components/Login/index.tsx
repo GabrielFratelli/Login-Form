@@ -77,21 +77,21 @@ export const Login = () => {
               />
               {errors.password && <p>{errors.password?.message}</p>}
             </label>
+            <ButtonRemember>
+              <input type="checkbox" />
+              <span>Remember me</span>
+              <button>Forgot password?</button>
+            </ButtonRemember>
+            <ButtonLogin>
+              <button id="login" type="submit">
+                Login Now
+              </button>
+              <button id="google" type="button">
+                <img src={Icon} alt="Icon Google" />
+                Or sign with google
+              </button>
+            </ButtonLogin>
           </Form>
-          <ButtonRemember>
-            <input type="checkbox" />
-            <span>Remember me</span>
-            <button>Forgot password?</button>
-          </ButtonRemember>
-          <ButtonLogin>
-            <button id="login" type="submit">
-              Login Now
-            </button>
-            <button id="google" type="button">
-              <img src={Icon} alt="Icon Google" />
-              Or sign with google
-            </button>
-          </ButtonLogin>
         </LoginContent>
         <Footer>
           <span>Dont have an account?</span>

@@ -8,7 +8,6 @@ export const Container = styled.div`
 
   > div {
     flex: 1;
-    border: 1px solid red;
   }
 `;
 
@@ -29,54 +28,89 @@ export const FormContainer = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
-  border: 1px solid #000;
 `;
 
 export const LoginContent = styled.div`
-  height: 100%;
-  width: 100%;
+  height: 28rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-direction: column;
-
-  border: 1px solid red;
 `;
 
 export const Title = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  border: 1px solid #000;
+  justify-content: center;
+
+  span {
+    font-size: 1.2rem;
+    color: var(--subtitle);
+  }
+
+  strong {
+    font-size: 2rem;
+    color: var(--title);
+  }
 `;
 
 export const Form = styled.form`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-direction: column;
-  border: 1px solid #000;
+  gap: 2rem;
 
   input {
-    margin: 15px;
+    width: 23rem;
+    height: 4rem;
     display: flex;
     align-items: center;
+    font-size: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--borderinput);
+    border-radius: 0.5rem;
+  }
+
+  span {
+    font-size: 1.2rem;
+    color: var(--titleinput);
   }
 `;
 
 export const ButtonRemember = styled.div`
-  width: 100%;
+  width: 23rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  border: 1px solid blue;
+  justify-content: space-between;
 
   input {
+    width: 1rem;
+    height: 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    color: var(--checkbox);
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-right: 5rem;
+    font-weight: 600;
+    color: var(--remember);
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    background: none;
+    color: var(--footerbutton);
   }
 `;
 
@@ -86,6 +120,20 @@ export const ButtonContent = styled.div`
   justify-content: center;
   flex-direction: column;
   border: 1px solid #000;
+  gap: 1rem;
+
+  button#login {
+    width: 23rem;
+    height: 4rem;
+    border: none;
+    border-radius: 0.5rem;
+  }
+  button {
+    width: 23rem;
+    height: 4rem;
+    border: none;
+    border-radius: 0.5rem;
+  }
 `;
 
 export const Footer = styled.div`

@@ -26,36 +26,38 @@ export const Login = () => {
       <FormContainer>
         <LoginContent>
           <Title>
-            <p>Welcome back</p>
+            <span>Welcome back</span>
             <strong>Login to your account</strong>
           </Title>
           <Form>
             <label>
-              Email:
-              <input type="text" placeholder="Informe seu email" />
+              <span>Email</span>
+              <input type="text" />
             </label>
             <label>
-              Password:
-              <input type="password" placeholder="Informe sua senha" />
+              <span>Password</span>
+              <input type="password" />
             </label>
           </Form>
           <ButtonRemember>
             <input type="checkbox" />
-
+            <span>Remember me</span>
             <button>Forgot password?</button>
           </ButtonRemember>
-          <ButtonContent>
-            <button type="submit">Login Now</button>
-            <button type="submit">
-              <img src={Icon} alt="Icon Google" />
-              Or sign with google
-            </button>
-          </ButtonContent>
           <Footer>
-            <p>
+            <ButtonContent>
+              <button id="login" type="submit">
+                Login Now
+              </button>
+              <button type="submit">
+                <img src={Icon} alt="Icon Google" />
+                Or sign with google
+              </button>
+            </ButtonContent>
+            <span>
               Dont have an account?
               <button>Join free today</button>
-            </p>
+            </span>
           </Footer>
         </LoginContent>
       </FormContainer>

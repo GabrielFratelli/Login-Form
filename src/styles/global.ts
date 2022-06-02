@@ -12,7 +12,6 @@ body {
   width: 100vw;
   height: 100vh;
 
-  max-width: 1920px;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
 }

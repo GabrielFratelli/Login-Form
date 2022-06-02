@@ -6,7 +6,7 @@ import { Router } from "../../routes";
 export const Home = () => {
   return (
     <>
-      <Router />
+      <Login />
     </>
   );
 };

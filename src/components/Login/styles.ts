@@ -33,7 +33,7 @@ export const FormContainer = styled.div`
 `;
 
 export const LoginContent = styled.div`
-  height: 28rem;
+  height: 33rem;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -46,7 +46,7 @@ export const Title = styled.div`
   justify-content: center;
 
   span {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--subtitle);
   }
 
@@ -64,24 +64,24 @@ export const Form = styled.form`
   gap: 2rem;
 
   input {
-    width: 23rem;
+    width: 28rem;
     height: 4rem;
     display: flex;
     align-items: center;
     font-size: 1rem;
     padding: 1rem;
-    border: 2px solid var(--borderinput);
+    border: 1px solid var(--borderinput);
     border-radius: 0.5rem;
   }
 
   span {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--titleinput);
   }
 `;
 
 export const ButtonRemember = styled.div`
-  width: 23rem;
+  width: 28rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -98,7 +98,7 @@ export const ButtonRemember = styled.div`
     display: flex;
     align-items: center;
     font-size: 1rem;
-    margin-right: 5rem;
+    margin-right: 10rem;
     font-weight: 600;
     color: var(--remember);
   }
@@ -111,31 +111,87 @@ export const ButtonRemember = styled.div`
     border: none;
     background: none;
     color: var(--footerbutton);
+    transition: filter 0.3s;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
   }
 `;
 
-export const ButtonContent = styled.div`
+export const ButtonLogin = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid #000;
   gap: 1rem;
 
   button#login {
-    width: 23rem;
+    width: 28rem;
     height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
     border: none;
     border-radius: 0.5rem;
+    background: var(--loginbutton);
+    color: var(--white);
+    transition: filter 0.1s;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
   }
-  button {
-    width: 23rem;
+
+  button#google {
+    width: 28rem;
     height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
     border: none;
     border-radius: 0.5rem;
+    background: var(--googlebutton);
+    color: var(--white);
+    transition: filter 0.1s;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+
+    > img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 10px;
+    }
   }
 `;
 
 export const Footer = styled.div`
-  border: 1px solid #000;
+  width: 28rem;
+  margin-top: 8rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  span {
+    color: var(--footer);
+    font-size: 1rem;
+  }
+
+  button {
+    color: var(--footerbutton);
+    border: none;
+    background: none;
+    font-size: 1rem;
+    transition: filter 0.3s;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
 `;

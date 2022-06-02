@@ -21,6 +21,7 @@ cursor: pointer;
 }
 
 :root {
+  --white: #FFFFFF;
   --subtitle: #2D3748;
   --title: #1A202C;
   --titleinput: #4A5568;

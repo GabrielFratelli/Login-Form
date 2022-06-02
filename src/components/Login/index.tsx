@@ -15,7 +15,7 @@ import {
   Title,
   Form,
   ButtonRemember,
-  ButtonContent,
+  ButtonLogin,
   Footer,
 } from "./styles";
 
@@ -44,24 +44,22 @@ export const Login = () => {
             <span>Remember me</span>
             <button>Forgot password?</button>
           </ButtonRemember>
-          <Footer>
-            <ButtonContent>
-              <button id="login" type="submit">
-                Login Now
-              </button>
-              <button type="submit">
-                <img src={Icon} alt="Icon Google" />
-                Or sign with google
-              </button>
-            </ButtonContent>
-            <span>
-              Dont have an account?
-              <button>Join free today</button>
-            </span>
-          </Footer>
+          <ButtonLogin>
+            <button id="login" type="submit">
+              Login Now
+            </button>
+            <button id="google" type="submit">
+              <img src={Icon} alt="Icon Google" />
+              Or sign with google
+            </button>
+          </ButtonLogin>
         </LoginContent>
+        <Footer>
+          <span>Dont have an account?</span>
+          <button>Join free today</button>
+        </Footer>
       </FormContainer>
-      {/* <Outlet /> */}
+      <Outlet />
     </Container>
   );
 };

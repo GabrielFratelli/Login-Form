@@ -87,7 +87,7 @@ export const Form = styled.form`
   }
 `;
 
-export const ButtonRemember = styled.div`
+export const RememberFooter = styled.div`
   width: 28rem;
   display: flex;
   align-items: center;
@@ -139,7 +139,7 @@ export const ButtonLogin = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  button#login {
+  a#login {
     width: 28rem;
     height: 4rem;
     display: flex;
@@ -152,6 +152,7 @@ export const ButtonLogin = styled.div`
     background: var(--loginbutton);
     color: var(--white);
     transition: filter 0.1s;
+    text-decoration: none;
 
     &:hover {
       filter: brightness(0.9);

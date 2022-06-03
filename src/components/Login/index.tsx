@@ -1,10 +1,11 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Outlet, Link } from "react-router-dom";
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
+import { api } from "../../services/api";
 import Icon from "../../assets/icon/google_icon.svg";
 
 import {
@@ -14,7 +15,7 @@ import {
   LoginContent,
   Title,
   Form,
-  ButtonRemember,
+  RememberFooter,
   ButtonLogin,
   Footer,
 } from "./styles";
@@ -38,6 +39,17 @@ const schema = yup
   .required();
 
 export const Login = () => {
+  const [autenticates, setAutenticates] = useState([]);
+
+  useEffect(() => {
+    api.get("autenticates").then(({ data }) => {
+      setAutenticates(data);
+    });
+    console.log(autenticates);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const {
     register,
     handleSubmit,
@@ -77,17 +89,17 @@ export const Login = () => {
               />
               {errors.password && <p>{errors.password?.message}</p>}
             </label>
-            <ButtonRemember>
+            <RememberFooter>
               <div>
                 <input type="checkbox" />
                 <span>Remember me</span>
               </div>
               <button>Forgot password?</button>
-            </ButtonRemember>
+            </RememberFooter>
             <ButtonLogin>
-              <button id="login" type="submit">
+              <Link to="/autenticate" id="login" type="submit">
                 Login Now
-              </button>
+              </Link>
               <button id="google" type="button">
                 <img src={Icon} alt="Icon Google" />
                 Or sign with google

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -39,10 +39,11 @@ const schema = yup
   .required();
 
 export const Login = () => {
-  const [autenticates, setAutenticates] = useState([]);
+  const navigate = useNavigate();
+  const [autenticate, setAutenticate] = useState([]);
 
   useEffect(() => {
-    api.get("autenticates").then((response) => {
+    api.get("/autenticate").then((response) => {
       console.log(response.data);
     });
   }, []);
@@ -56,7 +57,9 @@ export const Login = () => {
     resolver: yupResolver(schema),
   });
 
-  function onSubmit(userData: Inputs) {}
+  function onSubmit(userData: Inputs) {
+    navigate("/autenticate");
+  }
 
   return (
     <Container>
@@ -97,7 +100,7 @@ export const Login = () => {
               <Link to="/autenticate" id="login" type="submit">
                 Login Now
               </Link>
-              <button id="google" type="button">
+              <button id="google" type="submit">
                 <img src={Icon} alt="Icon Google" />
                 Or sign with google
               </button>

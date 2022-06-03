@@ -42,12 +42,9 @@ export const Login = () => {
   const [autenticates, setAutenticates] = useState([]);
 
   useEffect(() => {
-    api.get("autenticates").then(({ data }) => {
-      setAutenticates(data);
+    api.get("autenticates").then((response) => {
+      console.log(response.data);
     });
-    console.log(autenticates);
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const {

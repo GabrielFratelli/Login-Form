@@ -78,8 +78,10 @@ export const Login = () => {
               {errors.password && <p>{errors.password?.message}</p>}
             </label>
             <ButtonRemember>
-              <input type="checkbox" />
-              <span>Remember me</span>
+              <div>
+                <input type="checkbox" />
+                <span>Remember me</span>
+              </div>
               <button>Forgot password?</button>
             </ButtonRemember>
             <ButtonLogin>

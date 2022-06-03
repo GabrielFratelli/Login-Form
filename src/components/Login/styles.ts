@@ -80,7 +80,7 @@ export const Form = styled.form`
   }
 
   p {
-    margin-top: 0.2rem;
+    margin: 0.2rem;
     font-size: 1rem;
     position: absolute;
     color: var(--error);
@@ -92,7 +92,6 @@ export const ButtonRemember = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 0.5rem;
 
   input {
     width: 1rem;
@@ -102,13 +101,19 @@ export const ButtonRemember = styled.div`
     color: var(--checkbox);
   }
 
-  span {
+  > div {
+    width: 8rem;
     display: flex;
     align-items: center;
-    font-size: 1rem;
-    margin-right: 10rem;
-    font-weight: 600;
-    color: var(--remember);
+    justify-content: space-between;
+
+    span {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--remember);
+    }
   }
 
   button {
@@ -172,6 +177,8 @@ export const ButtonLogin = styled.div`
     }
 
     > img {
+      display: flex;
+      align-items: center;
       width: 1.5rem;
       height: 1.5rem;
       margin-right: 10px;
@@ -180,8 +187,8 @@ export const ButtonLogin = styled.div`
 `;
 
 export const Footer = styled.div`
+  height: 8rem;
   width: 28rem;
-  margin-top: 8rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;

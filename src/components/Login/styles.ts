@@ -33,7 +33,7 @@ export const FormContainer = styled.div`
 `;
 
 export const LoginContent = styled.div`
-  height: 33rem;
+  height: 31rem;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -64,8 +64,8 @@ export const Form = styled.form`
   gap: 2.5rem;
 
   input {
-    width: 28rem;
-    height: 4rem;
+    width: 25rem;
+    height: 3.5rem;
     display: flex;
     align-items: center;
     font-size: 1rem;
@@ -87,7 +87,7 @@ export const Form = styled.form`
 `;
 
 export const RememberFooter = styled.div`
-  width: 28rem;
+  width: 25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -139,8 +139,8 @@ export const ButtonLogin = styled.div`
   gap: 1rem;
 
   button#login {
-    width: 28rem;
-    height: 4rem;
+    width: 25rem;
+    height: 3.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,8 +159,8 @@ export const ButtonLogin = styled.div`
   }
 
   button#google {
-    width: 28rem;
-    height: 4rem;
+    width: 25rem;
+    height: 3.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -187,8 +187,8 @@ export const ButtonLogin = styled.div`
 `;
 
 export const Footer = styled.div`
-  height: 8rem;
-  width: 28rem;
+  width: 25rem;
+  height: 10rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;

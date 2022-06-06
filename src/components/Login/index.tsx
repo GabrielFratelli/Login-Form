@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -29,7 +29,7 @@ const schema = yup
   .object({
     email: yup
       .string()
-      .email("Digite um Email válido")
+      .email("Digite um email válido")
       .required("Este campo é obrigatório"),
     password: yup
       .string()
@@ -43,7 +43,7 @@ export const Login = () => {
   const [autenticate, setAutenticate] = useState([]);
 
   useEffect(() => {
-    api.get("/autenticate").then((response) => {
+    api.get("/users").then((response) => {
       console.log(response.data);
     });
   }, []);
@@ -58,7 +58,8 @@ export const Login = () => {
   });
 
   function onSubmit(userData: Inputs) {
-    navigate("/autenticate");
+    // console.log(userData);
+    // navigate("/autenticate");
   }
 
   return (
@@ -91,15 +92,15 @@ export const Login = () => {
             </label>
             <RememberFooter>
               <div>
-                <input type="checkbox" />
+                <input type="radio" />
                 <span>Remember me</span>
               </div>
               <button>Forgot password?</button>
             </RememberFooter>
             <ButtonLogin>
-              <Link to="/autenticate" id="login" type="submit">
+              <button id="login" type="submit">
                 Login Now
-              </Link>
+              </button>
               <button id="google" type="submit">
                 <img src={Icon} alt="Icon Google" />
                 Or sign with google

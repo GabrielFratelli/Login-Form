@@ -80,7 +80,6 @@ export const Form = styled.form`
   }
 
   p {
-    margin: 0.2rem;
     font-size: 1rem;
     position: absolute;
     color: var(--error);
@@ -124,7 +123,7 @@ export const RememberFooter = styled.div`
     border: none;
     background: none;
     color: var(--footerbutton);
-    transition: filter 0.3s;
+    transition: filter 0.5s;
 
     &:hover {
       filter: brightness(0.9);
@@ -139,7 +138,7 @@ export const ButtonLogin = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  a#login {
+  button#login {
     width: 28rem;
     height: 4rem;
     display: flex;

@@ -44,7 +44,7 @@ export const Login = () => {
 
   useEffect(() => {
     api.get("/users").then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
     });
   }, []);
 
@@ -58,7 +58,9 @@ export const Login = () => {
   });
 
   function onSubmit(userData: Inputs) {
-    // console.log(userData);
+    const account =
+      Response && userData ? "/autenticate" : alert("No records found");
+    console.log(account);
     // navigate("/autenticate");
   }
 
@@ -79,7 +81,7 @@ export const Login = () => {
                 placeholder="Enter your Email"
                 {...register("email", { required: true })}
               />
-              {errors.email && <p>{errors.email?.message}</p>}
+              {errors.email && <section>{errors.email?.message}</section>}
             </label>
             <label>
               <span>Password</span>
@@ -88,7 +90,7 @@ export const Login = () => {
                 placeholder="Inform your Password"
                 {...register("password", { required: true })}
               />
-              {errors.password && <p>{errors.password?.message}</p>}
+              {errors.password && <section>{errors.password?.message}</section>}
             </label>
             <RememberFooter>
               <div>

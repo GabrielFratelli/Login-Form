@@ -79,9 +79,9 @@ export const Form = styled.form`
     color: var(--titleinput);
   }
 
-  p {
-    font-size: 1rem;
+  section {
     position: absolute;
+    font-size: 1rem;
     color: var(--error);
   }
 `;

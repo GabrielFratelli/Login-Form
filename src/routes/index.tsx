@@ -7,7 +7,7 @@ export const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/autenticate" element={<h1>Welcome back!!!</h1>} />
+        <Route path="/autenticate" element={<h1>You are Authenticated!</h1>} />
       </Routes>
     </BrowserRouter>
   );

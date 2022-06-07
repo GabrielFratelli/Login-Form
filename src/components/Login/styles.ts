@@ -4,7 +4,7 @@ import Image from "../../assets/img/image.svg";
 export const Container = styled.div`
   height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   > div {
     flex: 1;
@@ -35,7 +35,6 @@ export const FormContainer = styled.div`
 export const LoginContent = styled.div`
   height: 31rem;
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
   flex-direction: column;
 `;
@@ -70,8 +69,8 @@ export const Form = styled.form`
     align-items: center;
     font-size: 1rem;
     padding: 1rem;
-    border: 1px solid var(--borderinput);
     border-radius: 0.5rem;
+    border: 1px solid var(--borderinput);
   }
 
   span {

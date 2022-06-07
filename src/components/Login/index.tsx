@@ -109,7 +109,7 @@ export const Login = () => {
                 <input type="radio" />
                 <span>Remember me</span>
               </div>
-              <button>Forgot password?</button>
+              <button disabled>Forgot password?</button>
             </RememberFooter>
             <ButtonLogin>
               <button id="login" type="submit">

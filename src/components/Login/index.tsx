@@ -59,7 +59,7 @@ export const Login = () => {
     if (match !== -1) {
       navigate("/autenticate");
     } else {
-      alert("usuário não encontrado");
+      alert("Usuário não encontrado!");
     }
   }
 
@@ -70,7 +70,7 @@ export const Login = () => {
         setUsers(data);
       })
       .catch((error) => {
-        alert("Não foi possivel carregar dados da api");
+        alert("Não foi possivel carregar dados da API");
       });
   }, []);
 

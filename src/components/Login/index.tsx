@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -40,29 +40,39 @@ const schema = yup
 
 export const Login = () => {
   const navigate = useNavigate();
-  const [autenticate, setAutenticate] = useState([]);
-
-  useEffect(() => {
-    api.get("/users").then((response) => {
-      // console.log(response.data);
-    });
-  }, []);
+  const [users, setUsers] = useState<Inputs[]>([]);
 
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<Inputs>({
     resolver: yupResolver(schema),
   });
 
-  function onSubmit(userData: Inputs) {
-    const account =
-      Response && userData ? "/autenticate" : alert("No records found");
-    console.log(account);
-    // navigate("/autenticate");
+  function onSubmit(user: Inputs) {
+    if (!user) return;
+    const match = users.findIndex(
+      ({ email, password }) =>
+        email === user.email && password === user.password
+    );
+    if (match !== -1) {
+      navigate("/autenticate");
+    } else {
+      alert("usuário não encontrado");
+    }
   }
+
+  useEffect(() => {
+    api
+      .get("/users")
+      .then(({ data }) => {
+        setUsers(data);
+      })
+      .catch((error) => {
+        alert("Não foi possivel carregar dados da api");
+      });
+  }, []);
 
   return (
     <Container>
@@ -115,7 +125,6 @@ export const Login = () => {
           <button>Join free today</button>
         </Footer>
       </FormContainer>
-      <Outlet />
     </Container>
   );
 };

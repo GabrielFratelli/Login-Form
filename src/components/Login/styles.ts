@@ -16,12 +16,6 @@ export const ImageContainer = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
-
-  img {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-  }
 `;
 
 export const FormContainer = styled.div`
@@ -71,6 +65,7 @@ export const Form = styled.form`
     padding: 1rem;
     border-radius: 0.5rem;
     border: 1px solid var(--borderinput);
+    position: relative;
   }
 
   span {
@@ -82,6 +77,7 @@ export const Form = styled.form`
     position: absolute;
     font-size: 1rem;
     color: var(--error);
+    border: 1px solid #000;
   }
 `;
 
@@ -125,7 +121,7 @@ export const RememberFooter = styled.div`
     transition: filter 0.5s;
 
     &:hover {
-      filter: brightness(0.9);
+      filter: brightness(0.5);
     }
   }
 `;

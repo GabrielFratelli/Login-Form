@@ -27,7 +27,7 @@ export const FormContainer = styled.div`
 `;
 
 export const LoginContent = styled.div`
-  height: 31rem;
+  height: 32rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -54,18 +54,19 @@ export const Form = styled.form`
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2.3rem;
 
-  input {
+  #inputs {
     width: 25rem;
     height: 3.5rem;
     display: flex;
     align-items: center;
     font-size: 1rem;
     padding: 1rem;
+    margin-top: 0.5rem;
+    position: relative;
     border-radius: 0.5rem;
     border: 1px solid var(--borderinput);
-    position: relative;
   }
 
   span {
@@ -77,7 +78,6 @@ export const Form = styled.form`
     position: absolute;
     font-size: 1rem;
     color: var(--error);
-    border: 1px solid #000;
   }
 `;
 
@@ -118,7 +118,7 @@ export const RememberFooter = styled.div`
     border: none;
     background: none;
     color: var(--footerbutton);
-    transition: filter 0.5s;
+    transition: filter 0.3s;
 
     &:hover {
       filter: brightness(0.5);
@@ -145,8 +145,8 @@ export const ButtonLogin = styled.div`
     border-radius: 0.5rem;
     background: var(--loginbutton);
     color: var(--white);
-    transition: filter 0.1s;
     text-decoration: none;
+    transition: filter 0.3s;
 
     &:hover {
       filter: brightness(0.9);
@@ -165,18 +165,18 @@ export const ButtonLogin = styled.div`
     border-radius: 0.5rem;
     background: var(--googlebutton);
     color: var(--white);
-    transition: filter 0.1s;
+    transition: filter 0.3s;
 
     &:hover {
       filter: brightness(0.9);
     }
 
     > img {
-      display: flex;
-      align-items: center;
       width: 1.5rem;
       height: 1.5rem;
-      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      margin-right: 0.8rem;
     }
   }
 `;
@@ -201,7 +201,7 @@ export const Footer = styled.div`
     transition: filter 0.3s;
 
     &:hover {
-      filter: brightness(0.9);
+      filter: brightness(0.5);
     }
   }
 `;

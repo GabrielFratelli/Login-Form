@@ -87,6 +87,7 @@ export const Login = () => {
             <label>
               <span>Email</span>
               <input
+                id="inputs"
                 type="text"
                 placeholder="Enter your Email"
                 {...register("email", { required: true })}
@@ -96,6 +97,7 @@ export const Login = () => {
             <label>
               <span>Password</span>
               <input
+                id="inputs"
                 type="password"
                 placeholder="Inform your Password"
                 {...register("password", { required: true })}

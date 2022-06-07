@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "email": "gabriel.fratelli99@gmail.com",
+      "password": "gabriel123"
+    },
+    {
+      "email": "elaine.cfratelli@gmail.com",
+      "password": "elaine123"
+    },
+    {
+      "email": "nildo.cassiano68@gmail.com",
+      "password": "nildo123"
+    },
+    {
+      "email": "fernanda.fratelli99@gmail.com",
+      "password": "fernanda123"
+    },
+    {
+      "email": "amanda.aquino@gmail.com",
+      "password": "amanda123"
+    }
+  ]
+}

@@ -37,6 +37,7 @@ export const Title = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  line-height: 1.5;
 
   span {
     font-size: 1rem;
@@ -96,7 +97,7 @@ export const RememberFooter = styled.div`
   }
 
   > div {
-    width: 8rem;
+    width: 8.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -104,6 +105,7 @@ export const RememberFooter = styled.div`
     span {
       display: flex;
       align-items: center;
+      justify-content: flex-start;
       font-size: 1rem;
       font-weight: 600;
       color: var(--remember);
@@ -182,15 +184,19 @@ export const ButtonLogin = styled.div`
 `;
 
 export const Footer = styled.div`
-  width: 25rem;
+  width: 30rem;
   height: 10rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 
   span {
-    color: var(--footer);
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     font-size: 1rem;
+    color: var(--footer);
   }
 
   button {

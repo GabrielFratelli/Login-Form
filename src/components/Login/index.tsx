@@ -63,6 +63,8 @@ export const Login = () => {
     }
   }
 
+// Rodar a API feita por mim: "db.json", para o useEffect não avisar que não está encontrando os dados assim que abrir a página.
+
   useEffect(() => {
     api
       .get("/users")
@@ -123,8 +125,9 @@ export const Login = () => {
           </Form>
         </LoginContent>
         <Footer>
-          <span>Dont have an account?</span>
+          <span>Dont have an account?
           <button>Join free today</button>
+          </span>
         </Footer>
       </FormContainer>
     </Container>
